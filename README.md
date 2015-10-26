@@ -1,7 +1,6 @@
 # ecma6-angular
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+A project to test out the new functionalities provided by EcmaScript 6. Translation is done by Babel. Some of the translations could not be made by the then current build of Babel, so expect some pages to throw some errors.
 
 ## Build & development
 
