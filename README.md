@@ -8,4 +8,5 @@ Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
 
+No tests written yet.
 Running `grunt test` will run the unit tests with karma.
