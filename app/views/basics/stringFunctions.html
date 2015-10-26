@@ -1,0 +1,66 @@
+<h2>{{title}}</h2>
+
+<h3>.includes("someString")</h3>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="button" ng-click="doesIncludeWithIndex(0)" value="Execute">
+
+<p>Does {{includesWord1}} include {{includesMatch1}}? {{doesIncludeWithIndexAnswer}}</p>
+
+<h3>.includes("someString", startingIndex)</h3>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="text" placeholder="Starting index" ng-model="includesIndex">
+<input type="button" ng-click="doesIncludeWithIndex(includesIndex)" value="Execute">
+
+<p>Does {{includesWord1}} include {{includesMatch1}} starting from index {{includesIndex}}? {{doesIncludeWithIndexAnswer}}</p>
+
+
+<h3>.startsWith("someString")</h3>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="button" ng-click="doesStartWithWithIndex(0)" value="Execute">
+
+<p>Does {{includesWord1}} start with {{includesMatch1}}? {{doesStartWithAnswer}}</p>
+
+<h3>.startsWith("someString", startingIndex)</h3>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="text" placeholder="Starting index" ng-model="includesIndex">
+<input type="button" ng-click="doesStartWithWithIndex(includesIndex)" value="Execute">
+
+<p>Does {{includesWord1}} start with {{includesMatch1}} starting from index {{includesIndex}}? {{doesStartWithAnswer}}</p>
+
+
+
+<h3>.endsWith("someString")</h3>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="button" ng-click="doesEndWithWithIndex(includesWord1.length)" value="Execute">
+
+<p>Does {{includesWord1}} end with {{includesMatch1}}? {{doesEndWithAnswer}}</p>
+
+<h3>.endsWith("someString", startingIndex*)</h3>
+<h4>*starts counting at the end of the first argument</h4>
+
+<input type="text" placeholder="String to match on" ng-model="includesWord1">
+<input type="text" placeholder="String to match" ng-model="includesMatch1">
+<input type="text" placeholder="Starting index" ng-model="includesIndex">
+<input type="button" ng-click="doesEndWithWithIndex(includesIndex)" value="Execute">
+
+<p>Does {{includesWord1}} end with {{includesMatch1}} starting from index {{includesIndex}}? {{doesEndWithAnswer}}</p>
+
+
+<h3>.repeat(nmbrOfTimes)</h3>
+
+<input type="text" placeholder="String to repeat" ng-model="includesWord1">
+<input type="text" placeholder="Number of repeats" ng-model="repeats">
+<input type="button" ng-click="repeat()" value="Execute">
+
+<p>The repeated word {{includesWord1}} (x {{repeats}}): {{repeatedWord}}</p>
+

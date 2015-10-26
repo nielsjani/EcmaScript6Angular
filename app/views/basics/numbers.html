@@ -1,0 +1,36 @@
+<h2>Numbers</h2>
+<p>parseInt no longer converts binary or octagonal string representations of integers. Use Number instead</p>
+
+<h3>Number("someBinary")*</h3>
+<p>Binary value has to be prepended by 0b or 0B. Eg 0b101 is the binary for 5</p>
+
+<input type="text" ng-model = "binaryToParse" />
+<input type="button" ng-click="parse(binaryToParse)" value="Parse">
+<p>Converted: {{result}}</p>
+
+<h3>Number("SomeOctagonal")*</h3>
+<p>Octagonal value has to be prepended by 0o or 0O. Eg 0o63 is the octagonal for 51</p>
+
+<input type="text" ng-model = "octagonalToParse" />
+<input type="button" ng-click="parse(octagonalToParse)" value="Parse">
+<p>Converted: {{result}}</p>
+
+
+<p>Number also has its own isFinite() and isNaN() methods. These almost behave the same way as the regular versions of these methods. The exception: both methods will always return
+false when passed a non integer value. Eg: Number.isFinite(7) returns true, Number.isFinite("7") returns false.</p>
+
+<p>Number also gains the parseInt() and parseFloat() methods. These are equal to the old methods with the same name.</p>
+
+<h3>Number.isInteger(someInt)</h3>
+
+<p>Is 25 an integer? {{isInteger(25)}}</p>
+<p>Is 25.456 an integer? {{isInteger(25.456)}}</p>
+<p>Is 25.0 an integer? {{isInteger(25.0)}}</p>
+<p>Is "25" an integer? {{isInteger("25")}}</p>
+
+<h3>Number.isSafeInteger(someInt)</h3>
+<h4>Also: Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_INTEGER</h4>
+<p>Is {{min-1}} a safe integer? {{isSafeInteger(min-1)}}</p>
+<p>Is {{min}} a safe integer? {{isSafeInteger(min)}}</p>
+<p>Is {{max}} a safe integer? {{isSafeInteger(max)}}</p>
+<p>Is {{max+1}} a safe integer? {{isSafeInteger(max+1)}}</p>

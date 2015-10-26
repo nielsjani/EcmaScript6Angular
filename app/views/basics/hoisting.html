@@ -1,0 +1,41 @@
+<h2>let and hoisting</h2>
+
+<p>Variables declared in a function using the 'var' keyword, are automatically pulled up to the top of the function by the JS engine.
+This causes the variable to be accessible in the entire function (in the state "undefined" in places where you'd normally expect it to not be accessible.</p>
+
+<p>Eg:</p>
+<p>function getX(){</p>
+<p>//JS engine will actually define foo on this line</p>
+<p>if(something === true){</p>
+<p>var foo = "x"</p>
+<p>} else {</p>
+<p>//foo is accessible here as "undefined"</p>
+<p>}</p>
+<p>}</p>
+
+
+<p>The solution: the "let" keyword. It replaces the "var" keyword and all of its "odd" behaviour.</p>
+<p>Eg:</p>
+
+<p>Eg:</p>
+<p>function getX(){</p>
+<p>if(something === true){</p>
+<p>let foo = "x"</p>
+<p>} else {</p>
+<p>//foo is not accessible here. Trying to do so, will result in an error</p>
+<p>}</p>
+<p>}</p>
+
+<p>It is not impossible to define a "var" and "let" variable with the same name</p>
+
+<p>Eg:</p>
+
+<p>var x = "foo"</p>
+<p>let x = "bar" //Will result in an error</p>
+
+<h3>TL:DR; Replace var with let and live a happier life!</h3>
+
+<h2>const</h2>
+
+<p>const is a new keyword to define constand values. Eg: const DAYS_IN_WEEK = 7. const values always need to be initialized immediately. Just like let, const vars defined in functions only exists in
+block level scope (eg in an if, but not in the if's else).</p>
